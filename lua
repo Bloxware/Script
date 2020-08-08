@@ -10,7 +10,7 @@
 
 -- Extremly bad code starts below here
 
-local DEBUG_MODE = false -- warnings, prints and profiles dont change idiot thanks
+local DEBUG_MODE = false --
 
 -- Ok I declare some variables here for micro optimization. I might declare again in the blocks because I am lazy to check here
 local game, workspace = game, workspace
@@ -74,7 +74,7 @@ servs = setmetatable(
 })
 
 local connections = {}
-local function bindEvent(event, callback) -- Let me disconnect in peace
+local function bindEvent(event, callback) --
     local con = event:Connect(callback)
     table.insert(connections, con)
     return con
@@ -128,7 +128,7 @@ local serializer = {}
 
 local settings = {}
 
-local hud = loadstring(game:HttpGet("https://pastebin.com/raw/mAf1KfqN", DEBUG_MODE == false and true or DEBUG_MODE == true and false))() -- Ugly ui do not care
+local hud = loadstring(game:HttpGet("https://pastebin.com/raw/mAf1KfqN", DEBUG_MODE == false and true or DEBUG_MODE == true and false))() --
 
 local aimbot = {}
 
@@ -274,7 +274,7 @@ do
     end
 
     spawn(function()
-        while ah8 and ah8.enabled do -- Some games are gay
+        while ah8 and ah8.enabled do --
             utility.mychar = utility.getcharacter(locpl)
             if (utility.mychar ~= nil) then
                 utility.myroot = utility.getroot(locpl)
@@ -733,7 +733,7 @@ do
 						local a = {}
 						for i = 1,12 do
 							local l = hex_decode(read(2))
-							local b = read(tonumber(l)) -- why did I decide to do this
+							local b = read(tonumber(l)) --
 							a[i] = tonumber(b)
 						end
 						i = CFrame.new(unpack(a))
@@ -773,7 +773,7 @@ do
 end
 
 
--- great you have come a far way now stop before my horrible scripting will infect you moron
+--
 
 do
     --/ Settings
@@ -908,7 +908,7 @@ do
     })
 
 
-    local worldToScreenPoint = camera.WorldToScreenPoint -- why did I start this
+    local worldToScreenPoint = camera.WorldToScreenPoint --
     local target, _, closestplr = nil, nil, nil;
     local completeStop = false
 
@@ -1047,7 +1047,7 @@ do
     local newd = drawing.new
 
     local drawn = {}
-    function clearDrawn() -- who doesnt love drawing library
+    function clearDrawn() --
         for i,v in pairs(drawn) do
             pcall(function() v:Remove() end)
             drawn[i] = nil
@@ -1148,7 +1148,7 @@ do
         crossVer = v
     end
 
-    local function updateCrosshair() -- no reason at all to update this each frame
+    local function updateCrosshair() --
         -- I will replace with ViewportSize.Changed later
         if completeStop then return end
 
@@ -1666,7 +1666,7 @@ do
             color = isteam and boxes.teamcolor or boxes.enemycolor
         end
 
-        --size = ... lastsize--, v3new(5,8,0) --getBoundingBox(character)--]] root.CFrame, getExtentsSize(character)--]] -- Might change this later idk + idc
+        --size = ... lastsize--, v3new(5,8,0) --getBoundingBox(character)--]] root.CFrame, getExtentsSize(character)--]] --
         if _3dimension then
 
             local tlb, trb, blb, brb, tlf, trf, blf, brf, tlf0, trf0, blf0, brf0
@@ -1884,7 +1884,7 @@ do
         if ESP.enabled and (esp.enabled or boxes.enabled or tracers.enabled) then
             profilebegin("tracers.origin")
             if tracers.frommouse then 
-                tracers.origin = v2new(mouse.X, mouse.Y+36) -- thanks roblox
+                tracers.origin = v2new(mouse.X, mouse.Y+36) --
             else
                 tracers.origin = v2new(viewportsize.X/2, viewportsize.Y)
             end
@@ -1955,7 +1955,7 @@ do
     end
 
     spawn(function()
-        while ah8 and ah8.enabled do -- I dont know why I am doing this
+        while ah8 and ah8.enabled do --
             for i,v in pairs(hashes) do
                 hashes[i] = nil
                 wait()
@@ -1983,7 +1983,7 @@ do
     local stepped = runservice.Stepped
     local wait = renderstep.wait
 
-    local function Warn(a, ...) -- ok frosty get to bed
+    local function Warn(a, ...) --
         warn(tostring(a):format(...))
     end
     
